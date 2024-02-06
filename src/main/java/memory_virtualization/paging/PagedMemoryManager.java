@@ -16,7 +16,7 @@ public class PagedMemoryManager implements MainMemory {
 	public int getEmptyFrameCount() {
 		return 16 - totalUsedPageCount;
 	}
-	
+
 	public void assign(int physicalAddress, int pid, int pageNumber) {
 		frames[physicalAddress] = pid;
 		tempPageNumber[physicalAddress] = pageNumber;
@@ -53,5 +53,13 @@ public class PagedMemoryManager implements MainMemory {
 		}
 
 		return Optional.empty();
+	}
+
+	public void setTempPageNumber(int[] tempPageNumber) {
+		this.tempPageNumber = tempPageNumber;
+	}
+
+	public void setFrames(int[] frames) {
+		this.frames = frames;
 	}
 }

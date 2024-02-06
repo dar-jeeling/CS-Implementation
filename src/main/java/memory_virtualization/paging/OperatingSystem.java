@@ -182,4 +182,8 @@ public class OperatingSystem {
 	void showMemoryStatus() {
 		System.out.println(memory.getMemoryStatus());
 	}
+
+	public String getMemoryStatus() {
+		return memory.getMemoryStatus();
+	}
 }
