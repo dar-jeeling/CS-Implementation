@@ -1,11 +1,17 @@
 package memory_virtualization.paging;
 
-public class Process {
-    private int pid;
-    private int addressSpaceSize;
+import java.util.List;
 
-    public Process(int pid, int addressSpaceSize) {
-        this.pid = pid;
-        this.addressSpaceSize = addressSpaceSize;
-    }
+public class Process {
+	int pid;
+	int totalSize;
+	List<Integer> pageLocationStatus;
+	List<Integer> pageSize;
+
+	public Process(int pid, int totalSize, List<Integer> pageLocationStatus, List<Integer> pageSize) {
+		this.pid = pid;
+		this.totalSize = totalSize;
+		this.pageLocationStatus = pageLocationStatus;
+		this.pageSize = pageSize;
+	}
 }
